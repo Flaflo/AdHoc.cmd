@@ -21,9 +21,8 @@ goto end
 if not exist adhoc.ini echo ssid=AdHoc>adhoc.ini&echo.key=12346789>>adhoc.ini
 for /f "tokens=*" %%i in (adhoc.ini) do set %%i
 ::Apply config on hosted network
-echo Writing changes...
 netsh wlan set hostednetwork mode=allow ssid=%ssid% key=%key%
-echo In order to make changes take affect you need to restart the hosted network.
+echo Changes to the network applied.
 goto end
 :status
 ::Print general information about the network
