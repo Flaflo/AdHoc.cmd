@@ -13,12 +13,12 @@ set key=123456789
 set /p "ssid=SSID: "
 set /p "key=Key: "
 ::Write ini to file
-echo [AdHoc]>adhoc.ini&echo.ssid=%ssid%>>adhoc.ini&echo.key=%key%>>adhoc.ini
+echo ssid=%ssid%>adhoc.ini&echo.key=%key%>>adhoc.ini
 netsh wlan set hostednetwork mode=allow ssid=%ssid% key=%key%
 goto end
 :reload
 ::Setup ini default ini if not already exists and read into batch variables
-if not exist adhoc.ini echo [AdHoc]>adhoc.ini&echo.ssid=AdHoc>>adhoc.ini&echo.key=12346789>>adhoc.ini
+if not exist adhoc.ini echo ssid=AdHoc>adhoc.ini&echo.key=12346789>>adhoc.ini
 for /f "tokens=*" %%i in (adhoc.ini) do set %%i
 ::Apply config on hosted network
 echo Writing changes...
