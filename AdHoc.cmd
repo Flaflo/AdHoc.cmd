@@ -9,9 +9,9 @@ goto usage
 ::Set default variable values
 set ssid=AdHoc
 set key=123456789
-::Request user input for variables, quotes added for visibility of spaces
-set /p "ssid=SSID: "
-set /p "key=Key: "
+::Request user input for variables that where not set from parameters, quotes added for visibility of spaces
+if "%2" == "" (set /p "ssid=SSID: ") else (set ssid=%2)
+if "%3" == "" (set /p "key=Key: ") else (set key=%3)
 ::Write ini to file
 echo ssid=%ssid%>adhoc.ini&echo.key=%key%>>adhoc.ini
 goto reload
