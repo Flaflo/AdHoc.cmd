@@ -23,6 +23,7 @@ for /f "tokens=*" %%i in (adhoc.ini) do set %%i
 netsh wlan set hostednetwork mode=allow ssid=%ssid% key=%key%
 echo Changes to the network applied.
 goto end
+:info
 :status
 ::Print general information about the network
 netsh wlan show hostednetwork | findstr /i status
