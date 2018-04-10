@@ -4,10 +4,11 @@ Command-Line Tool for Windows to easily create Ad Hoc networks
 Can also be shown by calling `adhoc usage` or simply `adhoc`
 * `adhoc reload`
   + Applies the config to the Ad Hoc network
-* `adhoc status`
+* `adhoc status` or `adhoc info`
   + Shows the status of the Ad Hoc network
 * `adhoc setup`
   + Runs a setup for the Ad Hoc network
+  + Can consume ssid and key as parameter
 * `adhoc start`
   + Starts the Ad Hoc network
 * `adhoc stop`
