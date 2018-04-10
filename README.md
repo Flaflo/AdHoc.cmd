@@ -1,6 +1,6 @@
 # AdHoc.cmd
 Command-Line Tool for Windows to easily create Ad Hoc networks  
-As for now this is for wireless lan only
+*As for now this is for wireless lan only*
 # Commands
 Can also be shown by calling `adhoc usage` or simply `adhoc`
 * `adhoc reload`
