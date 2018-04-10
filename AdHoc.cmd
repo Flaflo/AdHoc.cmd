@@ -45,9 +45,10 @@ goto end
 :usage
 ::Print usage of this program
 echo AdHoc Usage:
-echo adhoc setup  - Runs a setup for the Ad Hoc network
-echo adhoc reload - Applies the config to the Ad Hoc network
-echo adhoc status - Shows the status of the Ad Hoc network
-echo adhoc start  - Starts the Ad Hoc network
-echo adhoc stop   - Stops the Ad Hoc network
+echo adhoc setup [ssid] [key]  - Runs a setup for the Ad Hoc network
+echo adhoc reload              - Applies the config to the Ad Hoc network
+echo adhoc status              - Shows the status of the Ad Hoc network
+echo adhoc info                - An alias for "adhoc status"
+echo adhoc start               - Starts the Ad Hoc network
+echo adhoc stop                - Stops the Ad Hoc network
 :end
